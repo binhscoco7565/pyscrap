@@ -8,13 +8,13 @@ src = requests.content
 code = requests.status_code
 
 if code >= 200 and code <=306:
-    print('Connection Successful')
+    print('[] Connection Successful')
 elif code >= 400 and code <= 499:
-    print('Client Problem Detected by Server!')
+    print('[] Client Problem Detected by Server!')
 elif code >= 500 and code <= 599:
-    print('Server is not availible or Under maintainence.')
+    print('[] Server is not availible or Under maintainence.')
 else:
-    print('Unknown error occurred!')
+    print('[] Unknown error occurred!')
 
 soup = BeautifulSoup(src, 'lxml')
 
@@ -23,7 +23,7 @@ while(True):
     option.lower()
 
     if option == 'help':
-        print('f - Find all tags \ns - show specific tag \nexit - exit the program')
+        print('[]  f - Find all tags \n[]  s - show specific tag \n[]  exit - exit the program')
         continue
     elif option == 'f':
         tag = input('[] What tag do you want to find? e.g h1, a, div : ')
@@ -31,7 +31,7 @@ while(True):
         file = open('output.txt', 'wb')
         file.write(str_soup.encode('utf-8'))
         file.close()
-        print('Success!')
+        print('[] Success!')
     elif option == 's':
         tag = input('[] What tag do you want to find? e.g h1, a, div : ')
         classVar = input('[] What class do you want to find? : ')
@@ -39,9 +39,9 @@ while(True):
         file = open('output.txt', 'wb')
         file.write(str_soup.encode('utf-8'))
         file.close()
-        print('Success!')
+        print('[] Success!')
     elif option == 'exit':
         exit()
     else:
-        print('exit')
+        print('[] exiting')
         exit()
