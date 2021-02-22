@@ -5,6 +5,6 @@ PyScrape is a user-friendly, fast and lightweight python script that will allow 
 ## Usage
 
 Get requests
-`<pip install requests>`
+`pip install requests` or `pip3 install requests`
 Get BeautifulSoup4
-`<pip install bs4>`
+`pip install bs4` or `pip3 install bs4`
